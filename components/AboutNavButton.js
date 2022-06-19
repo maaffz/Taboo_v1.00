@@ -3,7 +3,7 @@ import { Button, View, StyleSheet } from 'react-native';
 import { Linking } from 'react-native-web';
 // import { NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
-import First from './First';
+import Home from './Home';
 
 // export default class AboutNavgButton extends Component {
 
@@ -13,7 +13,7 @@ import First from './First';
             <View style={styles.container}>
               <View style={styles.buttonContainer}>
                 <Button color= '#e83e8c' title="MAIN" onPress={() =>
-                navigation.navigate('First')}/>
+                navigation.navigate('Home')}/>
               </View>
               <View style={styles.buttonContainer}>
                 <Button color= '#e83e8c' title="MORE INFO" onPress={() =>

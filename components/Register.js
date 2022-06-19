@@ -1,10 +1,10 @@
 //import react from 'react';
 import React, { useState } from 'react';
-import { SafeAreaView, View, TextInput, Text, Button, Image } from 'react-native';
+import { SafeAreaView, View, TextInput, Text, Button, Image, StyleSheet } from 'react-native';
 import stylesExt from './Styles';
 //import * as React from 'react';
 import RegButton from './RegisterButton';
-import First from './First';
+import Home from './Home';
 
 const Register = ({navigation}) => {
     const [name, onChangeName] = React.useState("Full Name");
@@ -55,9 +55,49 @@ const Register = ({navigation}) => {
           <Text>Please read our privacy policy and terms of use first.</Text>
         </View>
         <View style={{ flex: 1, backgroundColor: '#F9D9E6' }} >
-          <RegButton />
+          <View style={styles.container2}>
+            <View style={styles.buttonContainer}>
+              <Button color= '#e83e8c' title="Home" onPress={() =>
+          navigation.navigate('Home')}/>
+            </View>
+            <View style={styles.buttonContainer}>
+              <Button color= '#e83e8c' title="Log In / Register" onPress={() => navigation.navigate('Login')}/>
+            </View>
+          {/* <View style={styles.buttonContainer}>
+            <Button color= '#e83e8c' title="Welcome" onPress={() =>
+          navigation.navigate('Welcome')}/>
+          </View> */}
+            <View style={styles.buttonContainer}>
+            <Button color= '#e83e8c' title="About" onPress={() =>
+          navigation.navigate('About')}/>
+            </View>
+              {/* <View style={styles.buttonContainer}>
+                <Button color= '#e83e8c' title="LOG IN" onPress={() =>
+                navigation.navigate('Login')}/>
+              </View>
+              <View style={styles.buttonContainer}>
+                <Button color= '#e83e8c' title="About" onPress={() =>
+                navigation.navigate('About')}/>
+              </View> */}
+            </View>
         </View>
       </SafeAreaView>
     );
   };
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      padding: 5,
+    },
+    container2: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttonContainer: {
+        flex: 1,
+    },
+  });
+  
   export default Register;

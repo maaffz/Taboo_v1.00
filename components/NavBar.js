@@ -14,7 +14,7 @@ const NavBar = ({ navigation }) => {
               <View style={styles.container2}>
                 <View style={styles.buttonContainer}>
                   <Button color= '#e83e8c' title="Home" onPress={() =>
-                navigation.navigate('First')}/>
+                navigation.navigate('Home')}/>
                 </View>
                 <View style={styles.buttonContainer}>
                   <Button color= '#e83e8c' title="Log In" onPress={() =>

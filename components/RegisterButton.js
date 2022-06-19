@@ -1,7 +1,7 @@
 import { Component, useState } from 'react';
 import { Button, View, StyleSheet } from 'react-native';
 import { Linking } from 'react-native-web';
-import First from './First';
+import Home from './Home';
 import Register from './Register';
 import * as React from 'react';
 // export default class RegButton extends Component {
@@ -16,7 +16,7 @@ import * as React from 'react';
               </View>
               <View style={styles.buttonContainer}>
                 <Button color= '#e83e8c' title="CANCEL" onPress={() =>
-                navigation.navigate('First')} />
+                navigation.navigate('Home')} />
               </View>
             </View>
         );

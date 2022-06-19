@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   
 });
 
-const dummyData=[
+const useData=[
   {key: 'Track periods'},
   {key: 'Birth control'},
   {key: 'Manage your purchases'},
@@ -25,7 +25,7 @@ const AppUseList = () => {
   return (
     <View style={styles.container}>
       <FlatList
-        data={dummyData}
+        data={useData}
         renderItem={({item}) => <Text style={stylesExt.item}>{item.key}</Text>}
       />
     </View>

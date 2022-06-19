@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { SafeAreaView, View, TextInput, Text, Button, Image,Alert } from 'react-native';
-import NavBar from './NavBar';
+import { SafeAreaView, View, TextInput, Text, Button, Image,Alert, StyleSheet } from 'react-native';
 import stylesExt from './Styles';
-import Register from './Register'; 
 import axios from 'axios';
   
 const Login = ({ navigation }) => {
@@ -28,11 +26,7 @@ const Login = ({ navigation }) => {
           const token=response.data.token[0];
           Alert.alert("My Token",token)
           console.log('tk',response.data.token[0])
-         
-      
-          
         }
-       
       })
       .catch( (error) => {
         console.log(error);
@@ -68,27 +62,44 @@ const Login = ({ navigation }) => {
 
               {/* <Button color= '#e83e8c' width={350} borderRadius={15} title="LOG IN" onPress={() =>
                 navigation.navigate(Login)}/> */}
-            </View>
-            <View style={{ flex: 1, backgroundColor: '#F9D9E6' }} >
-            <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="Home" onPress={() =>
-          navigation.navigate('First')}/>
           </View>
+          <View style={{ flex: 1, backgroundColor: '#F9D9E6' }} >
+            <View style={styles.container2}>
+              <View style={styles.buttonContainer}>
+                <Button color= '#e83e8c' title="Home" onPress={() =>
+          navigation.navigate('Home')}/>
+              </View>
           <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="Log In" onPress={() =>
-          navigation.navigate('Login')}/>
+            <Button color= '#e83e8c' title="Register a new account" onPress={() =>
+          navigation.navigate('Register')}/>
           </View>
-          <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="Welcome" onPress={() =>
+                {/* <View style={styles.buttonContainer}>
+                  <Button color= '#e83e8c' title="Welcome" onPress={() =>
           navigation.navigate('Welcome')}/>
-          </View>
-          <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="About" onPress={() =>
+                </View> */}
+                <View style={styles.buttonContainer}>
+                  <Button color= '#e83e8c' title="About" onPress={() =>
           navigation.navigate('About')}/>
-          </View>
+                </View>
+              </View>
             </View>
           </SafeAreaView>
     );
-}
+};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 5,
+  },
+  container2: {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+  buttonContainer: {
+      flex: 1,
+  },
+});
 
 export default Login;

@@ -100,7 +100,6 @@ import React, { useState } from 'react';
 import { SafeAreaView, View, TextInput, Text, Button, Image,Alert } from 'react-native';
 import NavBar from './NavBar';
 import stylesExt from './Styles';
-import Register from './Register'; 
 import axios from 'axios';
   
 const Welcome = ({ navigation }) => {

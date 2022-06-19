@@ -1,11 +1,12 @@
 //import React from "react";
-import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, Image, SafeAreaView, Button } from "react-native";
 import stylesExt from "./Styles";
 import { ScrollView } from 'react-native';
 import * as React from 'react';
 // import { NavigationContainer } from '@react-navigation/native';
-import AppUseList from "./AppUseList";
-import NavBar from "./NavBar";
+
+// import Home from "./Home";
+// import { Link } from "@react-navigation/native";
 
 const About = ({ navigation }) => {
   return (
@@ -44,13 +45,27 @@ const About = ({ navigation }) => {
       </View>
       <View style={{ flex: 1, backgroundColor: "#F9D9E6" }} >
         <View style={styles.container2}>
-          <NavBar />
-
-          {/* <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="MAIN PAGE" onPress={() =>
-                navigation.navigate('First')} />
+        <View style={styles.buttonContainer}>
+            <Button color= '#e83e8c' title="Home" onPress={() =>
+          navigation.navigate('Home')}/>
           </View>
           <View style={styles.buttonContainer}>
+            <Button color= '#e83e8c' title="Log In" onPress={() =>
+          navigation.navigate('Login')}/>
+          </View>
+          {/* <View style={styles.buttonContainer}>
+            <Button color= '#e83e8c' title="Welcome" onPress={() =>
+          navigation.navigate('Welcome')}/>
+          </View> */}
+          {/* <View style={styles.buttonContainer}>
+            <Button color= '#e83e8c' title="About" onPress={() =>
+          navigation.navigate('About')}/>
+          </View> */}
+          {/* <View style={styles.buttonContainer}>
+            <Button color= '#e83e8c' title="MAIN PAGE" onPress={() =>
+                navigation.navigate('Home')} />
+          </View> */}
+          {/* <View style={styles.buttonContainer}>
             <Button color= '#e83e8c' title="MORE INFO" onPress={() =>
                 navigation.navigate(Linking.openURL('https://tabooau.co/pages/our-story'))} />
           </View> */}

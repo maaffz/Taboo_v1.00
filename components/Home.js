@@ -6,7 +6,7 @@ import stylesExt from "./Styles";
 // import { NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
 
-const First = ({ navigation }) => {
+const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={[styles.container, {
       // Try setting `flexDirection` to `"row"`.
@@ -43,19 +43,18 @@ const First = ({ navigation }) => {
         </View>
       </View>
       <View style={{ flex: 1, backgroundColor: "#F9D9E6" }} >
-        {/* <LoginSignButton /> */}
         <View style={styles.container2}>
           {/* <View style={styles.buttonContainer}>
             <Button color= '#e83e8c' title="Home" onPress={() =>
-          navigation.navigate('First')}/>
+          navigation.navigate('Home')}/>
           </View> */}
           <View style={styles.buttonContainer}>
             <Button color= '#e83e8c' title="Log In" onPress={() =>
           navigation.navigate('Login')}/>
           </View>
           <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="Welcome" onPress={() =>
-          navigation.navigate('Welcome')}/>
+            <Button color= '#e83e8c' title="Register a new account" onPress={() =>
+          navigation.navigate('Register')}/>
           </View>
           <View style={styles.buttonContainer}>
             <Button color= '#e83e8c' title="About" onPress={() =>
@@ -91,4 +90,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default First;
+export default Home;

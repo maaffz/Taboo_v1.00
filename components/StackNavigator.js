@@ -1,7 +1,7 @@
 // import * as React from 'react';
 // import { NavigationContainer } from '@react-navigation/native';
 // import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import Welcome from './First';
+// import Home from './Home';
 // import Login from './Login';
 // import NewRegister from './Register';
 // import About from './About';
@@ -12,7 +12,7 @@
 //   return (
 //     <NavigationContainer>
 //       <Stack.Navigator>
-//         <Stack.Screen name="First" component={First} 
+//         <Stack.Screen name="Home" component={Home} 
 //         options={{ title: 'Welcome' }}
 //         />
 //         <Stack.Screen name="Login" component={Login} />
