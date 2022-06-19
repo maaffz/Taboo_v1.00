@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "Taboo_v1.00",
-    "slug": "Taboo_v1.00",
+    "slug": "Taboo",
+    "platforms": ["android", "ios", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
