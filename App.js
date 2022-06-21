@@ -14,22 +14,24 @@ import About from './components/About';
 // var height = Dimensions.get('window').height; //full height
 const Stack = createNativeStackNavigator();
 
+const MyStack=()=>{
+  return(
+    <Stack.Navigator initialRouteName='Home'>
+    <Stack.Screen name="Home" component={Home} options={{headerShown:false}} />
+    <Stack.Screen name="Login" component={Login} options={{headerShown:false}} />
+    <Stack.Screen name="Register" component={Register} options={{headerShown:false}} />
+    <Stack.Screen name="About" component={About} options={{headerShown:false}} />
+</Stack.Navigator>
+
+  )
+ 
+}
+
 const App = ({ navigation }) => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
-        {/* <Stack.Screen name="Home" component={Welcome} 
-        options={{ title: 'Welcome' }}
-        /> */}
-        <Stack.Screen name="Home" component={Home} options={{headerShown:false}} />
-        <Stack.Screen name="Login" component={Login} options={{headerShown:false}} />
-        <Stack.Screen name="Register" component={Register} options={{headerShown:false}} />
-        <Stack.Screen name="About" component={About} options={{headerShown:false}} />
-      </Stack.Navigator>
+      <MyStack/>
     </NavigationContainer>
-    // <View>
-    //   <About />
-    // </View>
   );
 };
 export default App;

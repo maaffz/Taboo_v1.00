@@ -21,7 +21,7 @@ const useData=[
   {key: 'Shortcut to our Spotify'},
 ];
 
-const AppUseList = () => {
+const UseList = () => {
   return (
     <View style={styles.container}>
       <FlatList
@@ -32,4 +32,4 @@ const AppUseList = () => {
   );
 }
 
-export default AppUseList;
+export default UseList;

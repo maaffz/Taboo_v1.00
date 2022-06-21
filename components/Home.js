@@ -6,7 +6,7 @@ import stylesExt from "./Styles";
 // import { NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
 
-const Home = ({ navigation }) => {
+const Home = ({navigation}) => {
   return (
     <SafeAreaView style={[styles.container, {
       // Try setting `flexDirection` to `"row"`.

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SafeAreaView, View, TextInput, Text, Button, Image,Alert, StyleSheet } from 'react-native';
 import stylesExt from './Styles';
 import axios from 'axios';
+import { LogIn_URL } from '../service/connect';
   
 const Login = ({ navigation }) => {
     const [username, setUsername] = useState('');
@@ -9,8 +10,9 @@ const Login = ({ navigation }) => {
     useState(true);
 
     const loginHandle=()=>{
-      const API_URL="http://192.168.0.13:8000/api/user/login/";
-      console.log(API_URL)
+      // const API_URL="http://192.168.0.13:8000/api/user/login/";
+      // console.log(API_URL)
+      console.log(LogIn_URL);
 
       const user={
           email: username,
@@ -20,7 +22,7 @@ const Login = ({ navigation }) => {
       console.log("email",user.email);
       console.log("password",user.password);
       
-      axios.post(API_URL, user)
+      axios.post(LogIn_URL, user)
       .then( (response) => {
         if (response.status ===200){
           const token=response.data.token[0];

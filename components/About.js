@@ -3,8 +3,8 @@ import { StyleSheet, Text, View, Image, SafeAreaView, Button } from "react-nativ
 import stylesExt from "./Styles";
 import { ScrollView } from 'react-native';
 import * as React from 'react';
+import UseList from "./UseList";
 // import { NavigationContainer } from '@react-navigation/native';
-
 // import Home from "./Home";
 // import { Link } from "@react-navigation/native";
 
@@ -36,7 +36,7 @@ const About = ({ navigation }) => {
               {"\n"}For menstruation to be understood as a respected and supported human experience that does not suppress anyone’s access to equal opportunity and rights. {"\n"}{"\n"}
               <Text style={stylesExt.titleText}>WHAT TO EXPECT FROM THIS APP</Text>
               {"\n"}This App was created to help you :{"\n"}
-              <AppUseList />
+              <UseList />
                {"\n"}{"\n"}
             </Text>
             <Image source={require('../assets/whos_behind_600x.jpg')} style={stylesExt.aboutImage} />
