@@ -21,7 +21,7 @@ const About = ({ navigation }) => {
       </View>
       <View style={{ flex: 4, backgroundColor: "#fff" }} >
         <View style={stylesExt.flex2a} >
-          <ScrollView>
+          <ScrollView maximumZoomScale= {2} minimumZoomScale= {0.7}>
             <Text style={stylesExt.baseText} alignItems= 'center'>
               <Text style={stylesExt.titleText}>WHO'S BEHIND TABOO?</Text>
               {"\n"}It all began in 2016 when co-founders Eloise and Isobel attended a school conference and left inspired to establish a business that enabled Australian customers to eradicate period poverty, through the simple action of shopping for their personal period products. {"\n"}{"\n"}
@@ -53,18 +53,7 @@ const About = ({ navigation }) => {
             <Button color= '#e83e8c' title="Log In" onPress={() =>
           navigation.navigate('Login')}/>
           </View>
-          {/* <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="Welcome" onPress={() =>
-          navigation.navigate('Welcome')}/>
-          </View> */}
-          {/* <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="About" onPress={() =>
-          navigation.navigate('About')}/>
-          </View> */}
-          {/* <View style={styles.buttonContainer}>
-            <Button color= '#e83e8c' title="MAIN PAGE" onPress={() =>
-                navigation.navigate('Home')} />
-          </View> */}
+          
           {/* <View style={styles.buttonContainer}>
             <Button color= '#e83e8c' title="MORE INFO" onPress={() =>
                 navigation.navigate(Linking.openURL('https://tabooau.co/pages/our-story'))} />

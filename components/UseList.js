@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
    flex: 1,
    paddingTop: 22
   },
+  container2: {
+    flex: 1,
+
+  }
   
 });
 
@@ -24,10 +28,12 @@ const useData=[
 const UseList = () => {
   return (
     <View style={styles.container}>
-      <FlatList
-        data={useData}
-        renderItem={({item}) => <Text style={stylesExt.item}>{item.key}</Text>}
-      />
+      <View style={styles.container2}>
+        <FlatList
+          data={useData}
+          renderItem={({item}) => <Text style={stylesExt.item}>{item.key}</Text>}
+        />
+      </View>
     </View>
   );
 }
